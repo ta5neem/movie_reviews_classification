@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Predict</title>
+{% endblock %}
+
+
+
+{% block body %}
+<br>
+<h2>Predict</h2>
+<hr>
+<br>
+
+<form action="/predict" , method="POST">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            
+
+            <label for="review">review</label>
+            <input class="form-control" type="string" , step="0.0001" name="review" id="review" placeholder="Enter review"
+                aria-label="Enter review">
+            <small id="zhelp" class="form-text text-muted">This Field is required.</small>
+            <br>
+
+ 
+            <input class="btn btn-success btn-lg btn-block" type="submit" value="Predict">
+            <hr>
+            <h5> labell is :    {{ labell }}</h5>
+            <hr>
+        </div>
+</form>
+
+{% endblock %}
